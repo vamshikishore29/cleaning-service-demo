@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: linear-gradient(45deg, #000, transparent);
+    opacity: 0.8;
+    margin: 0px;
+    border-radius: 3px;
+    padding: 5px;
+  }
+
+  .logo-container {
+    height: 27px;
+    width: 120px;
+    left: 32px;
+    top: 24px;
+    border-radius: 0px;
+    border-radius: 3px;
+    padding: 3px;
+    color: white;
+  }
+
+  .logo-title {
+    font-size: large;
+  }
+
+  .header-link-container {
+    display: block;
+    color: black;
+    display: flex;
+    margin-left: 40px;
+    align-self: center;
+    list-style-type: none;
+  }
+
+  .header-link {
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .contact-icon {
+    color: black;
+    width: 20px;
+  }
