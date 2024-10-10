@@ -1,27 +1,35 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    height: 75px;
+    height: 85px;
     width: 100%;
     left: 0px;
     top: 0px;
     border-radius: 0px;
-    background: linear-gradient(45deg, #000, transparent);
-    opacity: 0.8;
+    /* background: linear-gradient(45deg, #000, transparent); */
+    background: white;
+    /* opacity: 0.8; */
     margin: 0px;
     border-radius: 3px;
     padding: 5px;
   }
 
   .logo-container {
-    height: 27px;
-    width: 120px;
+    display: flex;
+    height: 80px;
+    width: 150px;
     left: 32px;
     top: 24px;
     border-radius: 0px;
     border-radius: 3px;
     padding: 3px;
     color: white;
+    /* background-image: url("https://www.mrhandyman.com/us/en-us/_assets/images/brand-config-logos/mrh-opus-new-logo.svg");
+    background-size: cover; */
+  }
+
+  .title-img {
+    width:100%
   }
 
   .logo-title {
@@ -39,8 +47,15 @@
 
   .header-link {
     margin-right: 20px;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 16px;
+    color: black;
+  }
+
+  .header-link:hover {
+    font-weight: bold;
+    color: brown;
+    text-decoration: underline;
   }
 
   .link {
@@ -51,4 +66,55 @@
   .contact-icon {
     color: black;
     width: 20px;
+  }
+
+  .popover-con {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 80%;
+    background: white;
+    margin-left: 50px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid grey;
+  }
+
+  .res-heading {
+    text-align: center;
+  }
+
+  .hor-line {
+    margin: 0px;
+  }
+
+  .repair-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .repair-con {
+    display: flex;
+  }
+
+  .popover-content-con {
+    color: black;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    
+  }
+
+  .popover-list{
+    margin: 10px;
+    height: 60px;
+  }
+
+  .btn-con {
+    background: transparent;
+    border: 0px;
+    width: 150px;
+  }
+
+  .btn-con:hover {
+    text-decoration: underline;
   }

@@ -64,31 +64,31 @@ export default function Home() {
     );
   }
 
-  function renderHomePageNavHeadings() {
-    return (
-      <nav className="navbar home-page-nav-heading-con">
-        <ul className="home-page-nav-items">
-          {homePageMainHeadings.map((item) => {
-            return (
-              <li className="nav-list-items" key={item}>
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    );
-  }
+  // function renderHomePageNavHeadings() {
+  //   return (
+  //     <nav className="navbar home-page-nav-heading-con">
+  //       <ul className="home-page-nav-items">
+  //         {homePageMainHeadings.map((item) => {
+  //           return (
+  //             <li className="nav-list-items" key={item}>
+  //               {item}
+  //             </li>
+  //           );
+  //         })}
+  //       </ul>
+  //     </nav>
+  //   );
+  // }
 
   return (
     <div className="home-container">
       <Header />
       <div className="home-page-layout">
-        {renderHomePageNavHeadings()}
-        <div className="home-page-left-layout">
+        {/* {renderHomePageNavHeadings()} */}
+        {/* <div className="home-page-left-layout">
           {renderHomePageLeftLayout()}
           {renderHomePageRightLayout()}
-        </div>
+        </div> */}
       </div>
     </div>
   );
