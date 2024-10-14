@@ -7,6 +7,7 @@ import About from "./About/About";
 import Services from "./Services/Services";
 import OurWork from "./OurWork/OurWork";
 import Blog from "./Blog/Blog";
+import Resedential from "./Resedential/Resedential";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/resedential" element={<Resedential />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/our-work" element={<OurWork />} />

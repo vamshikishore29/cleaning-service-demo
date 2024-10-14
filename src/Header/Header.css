@@ -1,120 +1,147 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 85px;
-    width: 100%;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    /* background: linear-gradient(45deg, #000, transparent); */
-    background: white;
-    /* opacity: 0.8; */
-    margin: 0px;
-    border-radius: 3px;
-    padding: 5px;
-  }
+  display: flex;
+  justify-content: space-between;
+  height: 85px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  /* background: linear-gradient(45deg, #000, transparent); */
+  background: white;
+  /* opacity: 0.8; */
+  margin: 0px;
+  border-radius: 3px;
+  padding: 5px;
+}
 
-  .logo-container {
-    display: flex;
-    height: 80px;
-    width: 150px;
-    left: 32px;
-    top: 24px;
-    border-radius: 0px;
-    border-radius: 3px;
-    padding: 3px;
-    color: white;
-    /* background-image: url("https://www.mrhandyman.com/us/en-us/_assets/images/brand-config-logos/mrh-opus-new-logo.svg");
+.logo-container {
+  display: flex;
+  height: 80px;
+  width: 150px;
+  left: 32px;
+  top: 24px;
+  border-radius: 0px;
+  border-radius: 3px;
+  padding: 3px;
+  color: white;
+  /* background-image: url("https://www.mrhandyman.com/us/en-us/_assets/images/brand-config-logos/mrh-opus-new-logo.svg");
     background-size: cover; */
-  }
+}
 
-  .title-img {
-    width:100%
-  }
+.title-img {
+  width: 100%;
+}
 
-  .logo-title {
-    font-size: large;
-  }
+.logo-title {
+  font-size: large;
+}
 
-  .header-link-container {
-    display: block;
-    color: black;
-    display: flex;
-    margin-left: 40px;
-    align-self: center;
-    list-style-type: none;
-  }
+.title-con {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
 
-  .header-link {
-    margin-right: 20px;
-    font-weight: bold;
-    font-size: 16px;
-    color: black;
-  }
+.logo-heading {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FF4136;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  
+}
 
-  .header-link:hover {
-    font-weight: bold;
-    color: brown;
-    text-decoration: underline;
-  }
+.contact {
+  font-weight: 500;
+}
 
-  .link {
-    color: white;
-    text-decoration: none;
-  }
+.handyman-heading {
+  font-weight: 500;
+  font-size: 12px;
+  color: brown;
+  border-bottom: 2px solid #ef1919;
+  text-align: right;  
+}
 
-  .contact-icon {
-    color: black;
-    width: 20px;
-  }
+.header-link-container {
+  display: block;
+  color: black;
+  display: flex;
+  margin-left: 40px;
+  align-self: center;
+  list-style-type: none;
+}
 
-  .popover-con {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 80%;
-    background: white;
-    margin-left: 50px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
-  }
+.header-link {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
 
-  .res-heading {
-    text-align: center;
-  }
+.header-link:hover {
+  font-weight: bold;
+  color: brown;
+  text-decoration: underline;
+}
 
-  .hor-line {
-    margin: 0px;
-  }
+.link {
+  color: white;
+  text-decoration: none;
+}
 
-  .repair-img {
-    width: 40px;
-    height: 40px;
-  }
+.contact-icon {
+  color: black;
+  width: 20px;
+}
 
-  .repair-con {
-    display: flex;
-  }
+.popover-con {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  background: white;
+  /* margin-left: 50px; */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
+}
 
-  .popover-content-con {
-    color: black;
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-    
-  }
+.res-heading {
+  text-align: center;
+}
 
-  .popover-list{
-    margin: 10px;
-    height: 60px;
-  }
+.hor-line {
+  margin: 0px;
+}
 
-  .btn-con {
-    background: transparent;
-    border: 0px;
-    width: 150px;
-  }
+.repair-img {
+  width: 40px;
+  height: 40px;
+}
 
-  .btn-con:hover {
-    text-decoration: underline;
-  }
+.repair-con {
+  display: flex;
+}
+
+.popover-content-con {
+  color: black;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.popover-list {
+  margin: 10px;
+  height: 60px;
+}
+
+.btn-con {
+  background: transparent;
+  border: 0px;
+  width: 150px;
+}
+
+.btn-con:hover {
+  text-decoration: underline;
+}

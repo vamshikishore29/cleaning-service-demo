@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
 import { resedential } from "../assets/resedential";
 
 export default function Header() {
   const [showPopup, setShowPopup] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/"); // Navigate to Home page
+  };
 
   function changeHover() {
     if (showPopup === true) {
@@ -37,13 +43,24 @@ export default function Header() {
         onMouseLeave={() => setShowPopup(false)}
       >
         <div className="logo-container">
-          <img
-            src="https://www.mrhandyman.com/us/en-us/_assets/images/brand-config-logos/mrh-opus-new-logo.svg"
-            alt="title"
-            className="title-img"
-          />
+          <div
+            className="title-con"
+            onClick={() => handleNavigation()}
+            onMouseEnter={() => setShowPopup(false)}
+          >
+            <span className="logo-heading">MELTECH</span>
+            <span className="handyman-heading">HandyMan</span>
+          </div>
           <ul className="header-link-container">
             <Link to="/" className="link">
+              <li
+                onMouseEnter={() => setShowPopup(false)}
+                className="header-link"
+              >
+                Home
+              </li>
+            </Link>
+            <Link to="/resedential" className="link">
               <li
                 onMouseEnter={() => setShowPopup(true)}
                 className="header-link"
@@ -52,21 +69,28 @@ export default function Header() {
               </li>
             </Link>
             <Link to="/about-us" className="link">
-              <li className="header-link">About</li>
+              <li
+                onMouseEnter={() => setShowPopup(false)}
+                className="header-link"
+              >
+                About
+              </li>
             </Link>
-            {/* <Link to="/services" className="link">
-          <li className="header-link">Services</li>
-        </Link> */}
-            {/* <Link to="/our-work" className="link">
-          <li className="header-link">Our Work</li>
-        </Link> */}
-
             <Link to="/blog" className="link">
-              <li className="header-link">Blog</li>
+              <li
+                onMouseEnter={() => setShowPopup(false)}
+                className="header-link"
+              >
+                Blog
+              </li>
             </Link>
           </ul>
         </div>
-        <button className="btn btn-info">Contact Us</button>
+        <div>
+          <i className="bi bi-telephone"> </i>
+          <span className="contact">3017934525</span>
+        </div>
+        {/* <button className="btn btn-info">Contact Us</button> */}
       </nav>
     );
   }
