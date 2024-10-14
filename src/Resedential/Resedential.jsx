@@ -11,8 +11,10 @@ export default function Resedential() {
   const leftLayoutItems = ["EPA Tech", "Hand Tech", "General Services"];
 
   const [listItems, setListItems] = useState(epaTechItems);
+  const [selectedItemName, setSelectedItemName] = useState("EPA Tech");
 
   function changeListDetails(item) {
+    setSelectedItemName(item);
     if (item == "EPA Tech") {
       setListItems(epaTechItems);
     } else if (item == "Hand Tech") {
@@ -24,18 +26,18 @@ export default function Resedential() {
   function renderHomePageLeftLayout() {
     return (
       <div className="list-group-con">
+        <h6 className="p-2">Resedential</h6>
+        <hr className="m-0" />
         <ul className="list-group">
           {leftLayoutItems.map((item) => {
             return (
               <div className="list-group-items-con" key={item}>
-                <li className="list-group-item" key={item}>
+                <li
+                  className="list-group-item"
+                  key={item}
+                  onClick={() => changeListDetails(item)}
+                >
                   {item}
-                  <div className="right-icon-con">
-                    <i
-                      className="bi bi-arrow-right right-icon"
-                      onClick={() => changeListDetails(item)}
-                    ></i>
-                  </div>
                 </li>
               </div>
             );
@@ -48,10 +50,11 @@ export default function Resedential() {
   function renderHomePageRightLayout() {
     return (
       <div className="list-details-con">
+        <h4 className="right-layout-heading">{selectedItemName}</h4>
         {listItems.map((item) => {
           return (
             <div key={item.name}>
-              <h4>{item.name}</h4>
+              <h4 className="item-heading">{item.name}</h4>
               <p>{item.description}</p>
               <hr className="line" />
             </div>

@@ -24,3 +24,18 @@ export const resedential = [
     url: "https://www.mrhandyman.com/us/en-us/mr-handyman/_assets/images/Service-Page-Icons-and-Header/menu-painting.svg",
   },
 ];
+
+export const resedentialService = [
+  {
+    name: "EPA Tech",
+    url: "https://www.mrhandyman.com/us/en-us/mr-handyman/_assets/images/Service-Page-Icons-and-Header/menu-electrical.svg",
+  },
+  {
+    name: "Hand Tech",
+    url: "https://www.mrhandyman.com/us/en-us/mr-handyman/_assets/images/Service-Page-Icons-and-Header/menu-assemble.svg",
+  },
+  {
+    name: "General  Service",
+    url: "https://www.mrhandyman.com/us/en-us/mr-handyman/_assets/images/Service-Page-Icons-and-Header/menu-repir.svg",
+  },
+];

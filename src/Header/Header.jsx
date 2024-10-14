@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
-import { resedential } from "../assets/resedential";
+import { resedentialService } from "../assets/resedential";
 
 export default function Header() {
   const [showPopup, setShowPopup] = useState(false);
@@ -18,15 +18,24 @@ export default function Header() {
     }
   }
 
+  function changePopOverContent() {
+    navigate("/resedential");
+  }
+
   function getPopOverContent() {
     return (
       <ul className="popover-content-con">
-        {resedential.map((item) => {
+        {resedentialService.map((item) => {
           return (
             <li key={item.name} className="popover-list">
-              <button className="btn-con repair-con">
+              <button
+                className="btn-con repair-con"
+                onClick={() => changePopOverContent()}
+              >
                 <img src={item.url} alt="repair" className="repair-img" />
-                <span>{item.name}</span>
+                <div className="p-2">
+                  <span>{item.name}</span>
+                </div>
               </button>
             </li>
           );

@@ -99,10 +99,8 @@
 .popover-con {
   display: flex;
   flex-direction: column;
-  height: 300px;
   width: 100%;
   background: white;
-  /* margin-left: 50px; */
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   border: 1px solid grey;
 }
@@ -139,7 +137,7 @@
 .btn-con {
   background: transparent;
   border: 0px;
-  width: 150px;
+  /* width: 150px; */
 }
 
 .btn-con:hover {
