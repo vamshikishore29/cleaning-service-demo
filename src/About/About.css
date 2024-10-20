@@ -2,8 +2,24 @@
     height: 100vh;
 }
 
-.about-page {
-    background-image: url("https://images.pexels.com/photos/2432221/pexels-photo-2432221.jpeg?auto=compress&cs=tinysrgb&w=600");
-    background-size: cover;
-    height: 100vh;
+.about-page-heading-con {
+    height: 100px;
+    background: radial-gradient(circle, #d9d9e4, #d8baba);
+    text-align: center;
+    padding-top: 20px;
+    color: brown;
+    border: solid 1px sandybrown;
 }       
+
+.about-page-middle-con {
+    padding: 20px;
+}
+
+.about-page-service-con {
+    list-style: inside;
+}
+
+.services-sub-heading {
+    font-size: 20px;
+    font-weight: 500;
+}

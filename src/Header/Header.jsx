@@ -18,8 +18,14 @@ export default function Header() {
     }
   }
 
-  function changePopOverContent() {
-    navigate("/resedential");
+  function changePopOverContent(itemName) {
+    if (itemName === "EPA Tech") {
+      navigate("/resedential-EPA-Tech");
+    } else if (itemName === "Hand Tech") {
+      navigate("/resedential-Hand-Tech");
+    } else {
+      navigate("/resedential-General");
+    }
   }
 
   function getPopOverContent() {
@@ -30,9 +36,9 @@ export default function Header() {
             <li key={item.name} className="popover-list">
               <button
                 className="btn-con repair-con"
-                onClick={() => changePopOverContent()}
+                onClick={() => changePopOverContent(item.name)}
               >
-                <img src={item.url} alt="repair" className="repair-img" />
+                <img src={item.url} alt={item.name} className="repair-img" />
                 <div className="p-2">
                   <span>{item.name}</span>
                 </div>
@@ -57,7 +63,7 @@ export default function Header() {
             onClick={() => handleNavigation()}
             onMouseEnter={() => setShowPopup(false)}
           >
-            <span className="logo-heading">MELTECH</span>
+            <span className="logo-heading">MELAKTECH3</span>
             <span className="handyman-heading">HandyMan</span>
           </div>
           <ul className="header-link-container">
@@ -69,7 +75,7 @@ export default function Header() {
                 Home
               </li>
             </Link>
-            <Link to="/resedential" className="link">
+            <Link to="/resedential-EPA-Tech" className="link">
               <li
                 onMouseEnter={() => setShowPopup(true)}
                 className="header-link"
@@ -85,14 +91,14 @@ export default function Header() {
                 About
               </li>
             </Link>
-            <Link to="/blog" className="link">
+            {/* <Link to="/blog" className="link">
               <li
                 onMouseEnter={() => setShowPopup(false)}
                 className="header-link"
               >
                 Blog
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
         <div>

@@ -1,26 +1,31 @@
 import Header from "../Header/Header";
-import { useState } from "react";
-import {
-  epaTechItems,
-  generalServices,
-  handTechItems,
-} from "../assets/list-details";
+import { useNavigate } from "react-router-dom";
+import { epaTechItems } from "../assets/list-details";
 import "./Resedential.css";
 
-export default function Resedential() {
+export default function ResedentialEPA() {
   const leftLayoutItems = ["EPA Tech", "Hand Tech", "General Services"];
+  const navigate = useNavigate();
+  // const [listItems, setListItems] = useState(epaTechItems);
+  // const [selectedItemName, setSelectedItemName] = useState("EPA Tech");
 
-  const [listItems, setListItems] = useState(epaTechItems);
-  const [selectedItemName, setSelectedItemName] = useState("EPA Tech");
-
-  function changeListDetails(item) {
-    setSelectedItemName(item);
-    if (item == "EPA Tech") {
-      setListItems(epaTechItems);
-    } else if (item == "Hand Tech") {
-      setListItems(handTechItems);
+  // function changeListDetails(item) {
+  //   setSelectedItemName(item);
+  //   if (item == "EPA Tech") {
+  //     setListItems(epaTechItems);
+  //   } else if (item == "Hand Tech") {
+  //     setListItems(handTechItems);
+  //   } else {
+  //     setListItems(generalServices);
+  //   }
+  // }
+  function changeListDetails(itemName) {
+    if (itemName === "EPA Tech") {
+      navigate("/resedential-EPA-Tech");
+    } else if (itemName === "Hand Tech") {
+      navigate("/resedential-Hand-Tech");
     } else {
-      setListItems(generalServices);
+      navigate("/resedential-General");
     }
   }
   function renderHomePageLeftLayout() {
@@ -50,8 +55,8 @@ export default function Resedential() {
   function renderHomePageRightLayout() {
     return (
       <div className="list-details-con">
-        <h4 className="right-layout-heading">{selectedItemName}</h4>
-        {listItems.map((item) => {
+        <h4 className="right-layout-heading">EPA Tech</h4>
+        {epaTechItems.map((item) => {
           return (
             <div key={item.name}>
               <h4 className="item-heading">{item.name}</h4>

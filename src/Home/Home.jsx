@@ -1,8 +1,9 @@
-// import React from 'react'
+import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import "./Home.css";
 
 export default function Home() {
+  const navigate = useNavigate();
   function renderMiddleSection() {
     return (
       <>
@@ -62,14 +63,57 @@ export default function Home() {
             including:
           </p>
           <ul>
-            <li className="faq-list">Repair</li>
-            <li className="faq-list">Remodel</li>
-            <li className="faq-list">Window & DoorService</li>
-            <li className="faq-list">Plumbing</li>
-            <li className="faq-list">Electrical</li>
-            <li className="faq-list">Painting</li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-EPA-Tech");
+              }}
+            >
+              Electrical
+            </li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-Hand-Tech");
+              }}
+            >
+              Plumbing
+            </li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-Hand-Tech");
+              }}
+            >
+              Repair
+            </li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-General");
+              }}
+            >
+              Painting
+            </li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-General");
+              }}
+            >
+              Cleaning
+            </li>
+            <li
+              className="faq-list"
+              onClick={() => {
+                navigate("/resedential-EPA-Tech");
+              }}
+            >
+              Washing
+            </li>
           </ul>
         </div>
+        <div className="home-page-footer"></div>
       </>
     );
   }
