@@ -101,7 +101,10 @@ export default function Header() {
             </Link> */}
           </ul>
         </div>
-        <div>
+        {/* <div className="list-icon-con"> */}
+        {/* <i className="bi bi-list list-icon"></i> */}
+        {/* </div> */}
+        <div className="contact-con">
           <i className="bi bi-telephone"> </i>
           <span className="contact">3017934525</span>
         </div>

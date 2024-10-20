@@ -45,7 +45,7 @@ const About = () => {
               Construction
             </span>
             <li>
-              What makes us different: -one call gets 3 Tech or 3 handyman save
+              What makes us different - one call gets 3 Tech or 3 handyman save
               time and money
             </li>
             <li>Consistent follow up</li>
